@@ -93,42 +93,24 @@
 	-webkit-animation: shadowRolling 1.8s ease infinite;
 	animation: shadowRolling 1.8s ease infinite;
 }
-
 @-webkit-keyframes shadowRolling {
-	0% {
+	0%, 12% {
 		box-shadow: var(--shadow), var(--shadow), var(--shadow), var(--shadow);
 	}
-	12% {
-		box-shadow: 100px 0 var(--ballcolor), var(--shadow), var(--shadow),
-			var(--shadow);
-	}
-	25% {
-		box-shadow: 110px 0 var(--ballcolor), 100px 0 var(--ballcolor), var(--shadow),
-			var(--shadow);
-	}
-	36% {
-		box-shadow: 120px 0 var(--ballcolor), 110px 0 var(--ballcolor),
-			100px 0 var(--ballcolor), var(--shadow);
+	25%, 36% {
+		box-shadow: 110px 0 var(--ballcolor), 100px 0 var(--ballcolor), var(--shadow), var(--shadow);
 	}
 	50% {
-		box-shadow: 130px 0 var(--ballcolor), 120px 0 var(--ballcolor),
-			110px 0 var(--ballcolor), 100px 0 var(--ballcolor);
+		box-shadow: 130px 0 var(--ballcolor), 120px 0 var(--ballcolor), 110px 0 var(--ballcolor), 100px 0 var(--ballcolor);
 	}
 	62% {
-		box-shadow: 200px 0 var(--shadowcolor), 130px 0 var(--ballcolor),
-			120px 0 var(--ballcolor), 110px 0 var(--ballcolor);
+		box-shadow: 200px 0 var(--shadowcolor), 130px 0 var(--ballcolor), 120px 0 var(--ballcolor), 110px 0 var(--ballcolor);
 	}
-	75% {
-		box-shadow: 200px 0 var(--shadowcolor), 200px 0 var(--shadowcolor),
-			130px 0 var(--ballcolor), 120px 0 var(--ballcolor);
-	}
-	87% {
-		box-shadow: 200px 0 var(--shadowcolor), 200px 0 var(--shadowcolor),
-			200px 0 var(--shadowcolor), 130px 0 var(--ballcolor);
+	75%, 87% {
+		box-shadow: 200px 0 var(--shadowcolor), 200px 0 var(--shadowcolor), 130px 0 var(--ballcolor), 120px 0 var(--ballcolor);
 	}
 	100% {
-		box-shadow: 200px 0 var(--shadowcolor), 200px 0 var(--shadowcolor),
-			200px 0 var(--shadowcolor), 200px 0 var(--shadowcolor);
+		box-shadow: 200px 0 var(--shadowcolor), 200px 0 var(--shadowcolor), 200px 0 var(--shadowcolor), 200px 0 var(--shadowcolor);
 	}
 }
 @keyframes shadowRolling {
@@ -167,20 +149,21 @@
 		box-shadow: 200px 0 var(--shadowcolor), 200px 0 var(--shadowcolor),
 			200px 0 var(--shadowcolor), 200px 0 var(--shadowcolor);
 	}
-}
-html {
+}html {
 	scroll-behavior: smooth;
 }
+
 body {
 	box-sizing: border-box;
 	margin: 0;
-	font-family: manrope, sans-serif;
+	font-family: "Manrope", sans-serif; /* Font stack with fallback */
 	background: var(--bg-drk);
 	overflow-x: hidden;
 	width: 100vw;
 }
+
 h1 {
-	font-family: manrope, sans-serif;
+	font-family: "Manrope", sans-serif;
 	font-weight: 700;
 	font-size: clamp(3.8rem, 8vw - 1rem, 5.5rem);
 	letter-spacing: -0.3rem;
@@ -194,7 +177,7 @@ h1 {
 
 h2 {
 	font-size: clamp(1rem, 3vw - 12pt, 1.2rem);
-	font-family: "Manrope", san-serif;
+	font-family: "Manrope", sans-serif; /* Font stack with fallback */
 	letter-spacing: 0.3ch;
 	text-transform: uppercase;
 	color: var(--heading);
@@ -202,7 +185,7 @@ h2 {
 
 p {
 	font-size: 1em;
-	font-family: "Manrope", san-serif;
+	font-family: "Manrope", sans-serif; /* Font stack with fallback */
 	font-weight: 400;
 }
 
@@ -211,10 +194,7 @@ p {
 	color: var(--heading);
 	width: 65vw;
 	background-color: hsla(0, 0%, 4%, 1);
-	margin-top: 4rem;
-	margin-bottom: 4rem;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 4rem auto; /* Simplify margin */
 	padding: 2em;
 	border-radius: 1em;
 	border: 1px solid var(--bg-lt);
@@ -231,11 +211,7 @@ p {
 	margin-left: auto;
 	margin-right: auto;
 }
-.logo{
-	/* display: none; */
-	width: 5%;
 
-}
 @media screen and (max-width: 768px) {
 	.title h1 {
 		display: none;
