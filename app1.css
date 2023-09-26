@@ -1,0 +1,90 @@
+:root {
+    /* Color Variables */
+    --text: #dbdbe0;
+    --link: #dadae6;
+    --link-hover: #e4e4ff;
+    --bg-drk: darkred;
+    --bg-header: rgb(73, 2, 2);
+    --bg-lt: hsl(240, 6%, 30%);
+    --primary: rgb(66, 66, 73);
+    --heading: #cdc9d1;
+    --subheading: #b2b1bd;
+    --h2: #b8b9c0;
+    --h3: #c2c2ca;
+    --green: #7bdae0;
+    --cyan: rgb(74, 153, 226);
+    --blue: #4546b4;
+    --violet: rgb(87, 59, 211);
+    --indigo: rgb(81, 54, 235);
+    --purple: rgb(124, 63, 223);
+    --pink: #df65e4;
+    --lighting-color: #984ddd;
+    --lighting-highlight-color: #c58eff;
+    --lighting-size: 300px;
+    --size: clamp(4rem, 5vh + 40px, 12rem);
+    --gap: calc(var(--size) / 4);
+    --duration: 60s;
+    --scroll-start: 0;
+    --scroll-end: calc(-100% - var(--gap));
+    
+    /* Font Size Media Queries */
+    @media screen and (max-width: 1680px) {
+      body,
+      input {
+        font-size: 14pt;
+      }
+    }
+  
+    @media screen and (max-width: 1280px) {
+      body,
+      input {
+        font-size: 12pt;
+      }
+    }
+  
+    @media screen and (max-width: 360px) {
+      body,
+      input {
+        font-size: 11pt;
+      }
+    }
+  
+    /* Font Smoothing */
+    * {
+      font-smoothing: antialiased;
+      font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  
+    /* ... other variables ... */
+  }
+  
+  /* ... other CSS rules ... */
+  
+  /* Combine similar media queries */
+  @media screen and (max-width: 360px) {
+    body,
+    input {
+      font-size: 11pt;
+    }
+  }
+  
+  /* Use a more concise selector */
+  .magic-star path {
+    fill: var(--pink);
+  }
+  
+  /* ... other styles ... */
+  
+  /* Optimized box-shadow property */
+  @keyframes shadowRolling {
+    0%, 12% {
+      box-shadow: 100px 0 var(--ballcolor), var(--shadow), var(--shadow), var(--shadow);
+    }
+    /* ... other keyframes ... */
+  }
+  
+  /* ... other keyframes ... */
+  
+  
